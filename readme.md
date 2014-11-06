@@ -6,9 +6,8 @@ Basic implementation of a comment board with posts and comment threads like face
 
 ## Features
 
-- Server side: PHP5, mysql through active record
-- Framework: Laravel
-- Client side: Html, Javascript and jquery for ajax calls.
+- Server side: Framework: Laravel MVC - PHP5, mysql through Eloquent ORM (active record) 
+- Client side: Html5, Javascript and jquery for ajax calls.
 
 ## License
 
