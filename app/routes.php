@@ -11,7 +11,13 @@
 |
 */
 
+
 Route::get('/', function()
+{
+  return Redirect::to('wall/');
+});
+
+Route::get('wall/', function()
 {
 	return View::make('wall');
 });
