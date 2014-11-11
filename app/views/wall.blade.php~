@@ -1,4 +1,3 @@
-<?= View::make('partials.header')?>
   <body>
     <div class="container">
       <h3 class="text-info">Feature focus: Posts and comment board (facebook-like)</h3>
