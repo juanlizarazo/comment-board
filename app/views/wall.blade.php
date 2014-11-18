@@ -11,12 +11,14 @@
         <div class="col-lg-12">
           <h4 class="text-muted">Update status</h4>
         </div>
-        <div class="col-lg-11">
-          <textarea class="form-control" rows="3" placeholder="What's on your mind?" autofocus="true" ></textarea>
-        </div>
-        <div class="col-lg-1">
-          <a class="btn btn-info btn-sm pull">Post</a>
-        </div>
+        <form action="wall/" method="post">
+          <div class="col-lg-11">
+            <textarea class="form-control" rows="3" name="post" placeholder="What's on your mind?" autofocus="true" ></textarea>
+          </div>
+          <div class="col-lg-1">
+            <button type="submit" class="btn btn-info btn-sm pull">Post</button>
+          </div>
+        </form>
       </div>
       <hr>
       <div class="row">
@@ -27,8 +29,10 @@
           This is a response
           <small class="text-muted">by anonymous on Nov 4th at 5:35pm</small>
           <hr>
-          <input type="text" class="form-control" placeholder="Write a comment">
-          <a class="btn btn-link btn-xs">Reply</a>
+          <form action="wall/" method="post">
+          <input type="text" class="form-control" name="post" placeholder="Write a comment"/>
+          <button type="submit" class="btn btn-link btn-xs">Reply</a>
+	  </form>
         </div>
         <div class="well bg-info">
           This is my second post!!
@@ -42,6 +46,6 @@
         </div>
       </div>
     </div>
-    <?= View::make('partials.footer') ?>
+    <?=View::make('partials.footer') ?>
   </body>
 </html>

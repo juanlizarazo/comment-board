@@ -23,7 +23,6 @@ class WallController extends \BaseController {
 	{
 		//
 	}
-
 	/**
 	 * Store a newly created resource in storage.
 	 * POST /wall
@@ -32,9 +31,14 @@ class WallController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+	  $data = Input::get('post');
+	  
+	  $post = new Post();
+	  $post->post = $data; 
+	  $post->save();
+	  
+	  return Redirect::to('wall');
 	}
-
 	/**
 	 * Display the specified resource.
 	 * GET /wall/{id}
@@ -46,7 +50,6 @@ class WallController extends \BaseController {
 	{
 		//
 	}
-
 	/**
 	 * Show the form for editing the specified resource.
 	 * GET /wall/{id}/edit
@@ -58,7 +61,6 @@ class WallController extends \BaseController {
 	{
 		//
 	}
-
 	/**
 	 * Update the specified resource in storage.
 	 * PUT /wall/{id}
@@ -70,7 +72,6 @@ class WallController extends \BaseController {
 	{
 		//
 	}
-
 	/**
 	 * Remove the specified resource from storage.
 	 * DELETE /wall/{id}
@@ -82,5 +83,4 @@ class WallController extends \BaseController {
 	{
 		//
 	}
-
 }

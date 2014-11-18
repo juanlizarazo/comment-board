@@ -21,3 +21,5 @@ Route::get('wall/', function()
 {
 	return View::make('wall');
 });
+
+Route::post('wall/','WallController@store'); 
